@@ -52,3 +52,11 @@ next-env.d.ts
 *.key
 *.p12
 *.pfx
+
+# Respaldos locales del desarrollo
+*.backup
+*.backup[0-9]*
+*.backup-*
+*.bak
+*.orig
+*.backup.*
