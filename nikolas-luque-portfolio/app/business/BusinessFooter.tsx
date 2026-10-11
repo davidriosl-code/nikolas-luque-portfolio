@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowUpRight, Github, Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { ArrowUpRight, Code2, BriefcaseBusiness, Mail, MessageCircle } from "lucide-react";
 
 const columns = [
   { title: "Explorar", links: [{ label: "CRM para empresas", href: "#soluciones" }, { label: "Plantillas Notion", href: "#soluciones" }, { label: "Automatizaciones", href: "#soluciones" }, { label: "Cómo trabajamos", href: "#proceso" }] },
@@ -41,8 +41,8 @@ export default function BusinessFooter() {
         <div className="flex items-center gap-5">
           <span className="text-[10px] uppercase tracking-widest opacity-50">Conectemos:</span>
           <div className="flex items-center gap-4">
-            <a href="https://github.com/davidriosl-code" aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><Github size={16}/></a>
-            <a href="https://www.linkedin.com/in/nikolas-r%C3%ADos-luque-510a641a2/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><Linkedin size={16}/></a>
+            <a href="https://github.com/davidriosl-code" aria-label="GitHub" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><Code2 size={16}/></a>
+            <a href="https://www.linkedin.com/in/nikolas-r%C3%ADos-luque-510a641a2/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><BriefcaseBusiness size={16}/></a>
             <a href="https://wa.me/51974988237" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><MessageCircle size={16}/></a>
             <a href="mailto:driosluque@gmail.com" aria-label="Correo" className="opacity-70 hover:opacity-100 transition-colors hover:text-white"><Mail size={16}/></a>
           </div>
