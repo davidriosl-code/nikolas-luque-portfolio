@@ -23,6 +23,7 @@ const nav = [
   {label:"Sobre mí",href:"#sobre-mi",external:false},
   {label:"Capacidades",href:"#capacidades",external:false},
   {label:"Mi stack",href:"#stack",external:false},
+  {label:"Business Solutions",href:"/business",external:false},
   {label:"Iron Man",href:"https://jarvis-armor-lab-david.driosluque.chatgpt.site",external:true}
 ];
 const stacks = [
