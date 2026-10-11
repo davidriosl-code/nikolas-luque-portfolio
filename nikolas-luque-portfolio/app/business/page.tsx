@@ -3,6 +3,7 @@ import { ArrowRight, ArrowUpRight, Bot, BriefcaseBusiness, ChartNoAxesCombined, 
 import type { Metadata } from "next";
 import styles from "./business.module.css";
 import BusinessFooter from "./BusinessFooter";
+import BusinessExperience from "./BusinessExperience";
 
 export const metadata: Metadata = {
   title: "Business Solutions | Nikolas Luque",
@@ -46,6 +47,7 @@ export default function BusinessPage() {
           <div><strong>API + IA</strong><span>Automatización</span></div>
         </div>
       </section>
+      <BusinessExperience />
       <section id="soluciones" className={styles.section}>
         <div className={styles.sectionTop}><div><span className={styles.kicker}>01 / SERVICIOS</span><h2>Soluciones para crecer</h2></div><p>Desde un sistema listo para adaptar hasta una implementación diseñada para tu negocio.</p></div>
         <div className={styles.cards}>{offers.map(({icon:Icon,...item})=><article className={styles.card} key={item.name}>
@@ -55,6 +57,14 @@ export default function BusinessPage() {
           <div className={styles.cardBottom}><strong>{item.price}</strong><a href={whatsapp(item.name)} target="_blank" rel="noopener noreferrer" aria-label={`Consultar por ${item.name}`}>Consultar <ArrowUpRight size={17}/></a></div>
         </article>)}</div>
         <p className={styles.disclaimer}>Precios referenciales de lanzamiento. La cotización final depende del alcance. Las soluciones se desarrollan y configuran según cada proyecto.</p>
+      </section>
+      <section className={styles.cinematic} aria-label="Inspiración visual y tecnología">
+        <div className={styles.cinematicFrame}>
+          <video className={styles.cinematicVideo} src="/business/cinematic-reference.mp4" autoPlay muted loop playsInline preload="none" poster="/spatial/glass-data.png" aria-label="Animación cinematográfica de inspiración tecnológica" />
+          <div className={styles.cinematicShade} />
+          <div className={styles.cinematicCopy}><span className={styles.kicker}>MOTION / EXPERIENCE</span><h2>El futuro se siente.</h2><p>Interfaces que reaccionan, datos que fluyen y tecnología que se adapta a ti.</p></div>
+        </div>
+        <p className={styles.cinematicNote}>La pieza audiovisual se reproducirá cuando copies el video de referencia a public/business/cinematic-reference.mp4.</p>
       </section>
       <section id="proceso" className={styles.process}>
         <div><span className={styles.kicker}>02 / CÓMO TRABAJAMOS</span><h2>De la idea al sistema.</h2><p>Una implementación clara, sin complicaciones innecesarias.</p></div>
