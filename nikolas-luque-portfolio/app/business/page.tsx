@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Bot, BriefcaseBusiness, ChartNoAxesCombined, DatabaseZap, Layers3, MessageCircle, Workflow } from "lucide-react";
 import type { Metadata } from "next";
 import styles from "./business.module.css";
+import BusinessFooter from "./BusinessFooter";
 
 export const metadata: Metadata = {
   title: "Business Solutions | Nikolas Luque",
@@ -18,7 +19,10 @@ const whatsapp = (service: string) => `https://wa.me/51974988237?text=${encodeUR
 
 export default function BusinessPage() {
   return (
-    <main className={styles.page}>
+    <main className={`${styles.page} relative w-full min-h-[115vh] overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white`}>
+      <video className="fixed inset-0 w-full h-full object-cover z-[0]" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4" autoPlay loop muted playsInline preload="metadata" aria-hidden="true" />
+      <div className={styles.videoOverlay} aria-hidden="true" />
+      <div className={`${styles.contentLayer} relative z-10 w-full flex flex-col items-center`}>
       <div className={styles.glow} aria-hidden="true" />
       <header className={styles.header}>
         <Link href="/" className={styles.brand} aria-label="Volver al portafolio">nl<span>.</span><small> / BUSINESS</small></Link>
@@ -61,7 +65,8 @@ export default function BusinessPage() {
         </div>
       </section>
       <section id="contacto" className={styles.contact}><span className={styles.kicker}>03 / EMPECEMOS</span><h2>¿Listo para organizar y escalar tu negocio?</h2><p>Cuéntame qué necesitas y preparemos una propuesta a tu medida.</p><a className={styles.primary} href={whatsapp("un CRM o una automatización")} target="_blank" rel="noopener noreferrer">Solicitar cotización <ArrowUpRight size={18}/></a></section>
-      <footer className={styles.footer}><span>© {new Date().getFullYear()} Nikolas Luque</span><Link href="/">Volver al portafolio <ArrowRight size={15}/></Link></footer>
+      <div className="w-full max-w-7xl px-4 md:px-7 pb-8"><BusinessFooter /></div>
+      </div>
     </main>
   );
 }
