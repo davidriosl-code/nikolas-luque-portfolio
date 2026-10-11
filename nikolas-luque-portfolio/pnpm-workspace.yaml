@@ -1,0 +1,11 @@
+packages:
+  - .
+minimumReleaseAge: 10080
+minimumReleaseAgeIgnoreMissingTime: false
+trustLockfile: false
+strictDepBuilds: true
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
+packageImportMethod: clone-or-copy
+verifyDepsBeforeRun: false
